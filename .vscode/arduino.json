@@ -2,5 +2,5 @@
     "board": "arduino:avr:mega",
     "configuration": "cpu=atmega2560",
     "port": "/dev/tty.usbmodem14601",
-    "sketch": "0-MyBlink/0-MyBlink.ino"
+    "sketch": "4-RGB_LED/RGB_LED.ino"
 }
