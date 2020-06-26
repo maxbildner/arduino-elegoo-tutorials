@@ -1,5 +1,6 @@
 /*
   Lesson 4: RGB LED
+  Start LED in a red color state, then it fades to green, then blue, then repeats
 */
 
 
