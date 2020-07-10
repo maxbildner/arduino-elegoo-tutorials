@@ -48,6 +48,9 @@ int blueValue;
 // 5) The loop function runs over and over again forever (after setup())
 void loop() {
   #define delayTime 10                                                          // fading time between colors
+  #define inbetweenDelay 3000                                                   // fading time inbetween loops
+
+  delay(inbetweenDelay);
 
   redValue = 255;                                                               // choose a value between 1 and 255 to change the color
   greenValue = 0;                                                               // 0 = off,   255 = max brightness
@@ -68,6 +71,8 @@ void loop() {
     delay(delayTime);                                                           // wait 10 miliseconds
   }
 
+  delay(inbetweenDelay);
+
   // 7) ensure that redValue is 0 (off), and green is full, and blue is 0 (off)? why is this necessary?
   redValue = 0;
   greenValue = 255;
@@ -79,9 +84,10 @@ void loop() {
 
     analogWrite(GREEN, greenValue);                                             // decrease green power
     analogWrite(BLUE, blueValue);                                               // increase blue power
-
     delay(delayTime);                                                           // wait 10 miliseconds
   }
+
+  delay(inbetweenDelay);
 
   // 9) ensure that greenValue is 0 (off), and blueValue is full, and red is 0 (off)
   redValue = 0;
@@ -94,7 +100,6 @@ void loop() {
     
     analogWrite(BLUE, blueValue);                                               // decrease blue power
     analogWrite(RED, redValue);                                                 // increase red power
-
-    delay(delayTime);
+    delay(delayTime);                                                           // wait 10 miliseconds
   }
 }
