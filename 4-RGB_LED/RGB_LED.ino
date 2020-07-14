@@ -3,7 +3,7 @@
   Start LED in a red color state, then it fades to green, then blue, then repeats
 */
 
-// Defin Pin Constants (nums refer to board pins)
+// Define Pin Constants (nums refer to board pins)
 #define BLUE 3                                                                  // make a constant variable called "BLUE", equal to integer 3
 #define GREEN 5
 #define RED 6
